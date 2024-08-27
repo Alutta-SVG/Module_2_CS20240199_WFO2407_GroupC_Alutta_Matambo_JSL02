@@ -7,7 +7,7 @@ welcomeMessage();
 
 // Function to display the workout routine
 const displayWorkoutRoutine = () => {
-    const workoutInput = document.querySelector('#workoutInput').value;
+    const workoutInput = document.querySelector('#workoutInput').value.trim();
     const workoutList = document.querySelector('#workoutList');
     const newWorkout = document.createElement('li');
     newWorkout.textContent = workoutInput;
