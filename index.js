@@ -39,7 +39,10 @@ const addNewGoal = () => {
     
     // ⚠️ Hint 3: Code structure
     // You might want to wrap the duplicate-checking logic in an 'if' statement.
-    
+    if (goalExists) {
+        alert ('this goal already exits');
+        return;
+    }
     // ⚠️ Hint 4: Event listener
     // The event listener that removes goals when clicked is not related to this issue.
     // Focus on preventing duplicates for now.
