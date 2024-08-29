@@ -24,19 +24,20 @@ document.querySelector('#submitWorkout').addEventListener('click', displayWorkou
 const addNewGoal = () => {
     const goalInput = document.querySelector('#goalInput').value;
     const goalList = document.querySelector('#goalList');
-     // ⚠️ Hint 1: Check for duplicates
-    // Use 'goalList' to get all existing goals and check if 'goalInput' matches any of them.
+    
+    //empty input
     if (!goalInput) {
         alert('Please enter a goal.');
         return;
     }
+    //checks for duplicates
     const goals = Array.from(goalList.getElementsByTagName('li'));
     const goalExists = goals.some(goal => goal.textContent === goalInput);
     if (goalExists) {
         alert('This goal already exists.');
         return;
     }
-    
+   //addition of the new goal
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;
     goalList.appendChild(newGoal);
