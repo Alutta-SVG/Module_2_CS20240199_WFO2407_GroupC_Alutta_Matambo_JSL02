@@ -31,6 +31,7 @@ const addNewGoal = () => {
         return;
     }
     const goals = Array.from(goalList.getElementByTagName ('li'));
+    const goalExists = goals.some (goal=>goal.textContent=== goalInput);
 
     // ⚠️ Hint 2: Prevent duplicates
     // If a duplicate is found, display an alert to the user and don't add the goal to the list.
