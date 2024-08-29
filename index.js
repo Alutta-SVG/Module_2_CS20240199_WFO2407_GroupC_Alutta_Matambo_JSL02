@@ -30,6 +30,8 @@ const addNewGoal = () => {
         alert('please enter a goal');
         return;
     }
+    const goals = Array.from(goalList.getElementByTagName ('li'));
+
     // ⚠️ Hint 2: Prevent duplicates
     // If a duplicate is found, display an alert to the user and don't add the goal to the list.
     // If it's not a duplicate, proceed with adding it as a new goal.
