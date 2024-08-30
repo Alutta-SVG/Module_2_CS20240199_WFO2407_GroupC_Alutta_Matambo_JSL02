@@ -25,11 +25,7 @@ const addNewGoal = () => {
     const goalInput = document.querySelector('#goalInput').value;
     const goalList = document.querySelector('#goalList');
     
-    //empty input
-    if (!goalInput) {
-        alert('Please enter a goal.');
-        return;
-    }
+    
     //checks for duplicates
     const goals = Array.from(goalList.getElementsByTagName('li'));
     const goalExists = goals.some(goal => goal.textContent === goalInput);
