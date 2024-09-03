@@ -28,7 +28,7 @@ const addNewGoal = () => {
 
     //goallist gets all the goals and goal inout to check if it matches  
     const goals = Array.from(goalList.getElementsByTagName('li'));
-    const goalExists = goals.some(goal => goal.textContent === goalInput);
+    const goalExists = goals.some(goal => goal.textContent.trim(). toLowerCase()=== goalInput.trim().toLowerCase());
 
     //check for duplicate 
     if (goalExists) {
